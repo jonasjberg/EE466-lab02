@@ -1,0 +1,24 @@
+### kicad ###
+*.bak
+*.bck
+*.kicad_pcb-bak
+
+
+### Linux ###
+*~
+
+# KDE directory preferences
+.directory
+
+
+### vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+
+### pdfTex ###
+texput.log
