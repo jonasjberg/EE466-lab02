@@ -1,0 +1,251 @@
+% ==============================================================================
+% LAB 117
+% SIMULERING PÅ ELEKTRISKA KRETSAR
+% --------------------------------
+% Last updated <2015-02-22> 
+%
+% Author:
+% Jonas Sjöberg     <tel12jsg@student.hig.se>
+% Oscar Wallberg    <tco13owg@student.hig.se>
+% 
+% License:
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+% See LICENSE.md for full licensing information.
+% ==============================================================================
+
+% ==============================================================================
+% INCLUDES AND CONFIGURATION
+% ==============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel} % För svensk innehållsförteckning
+\usepackage{siunitx} % (För dokumentation, kör i terminalen; texdoc siunitx)
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable} % Tables span across pages
+\usepackage{microtype}
+\usepackage{gensymb}
+%\usepackage{tabto}
+\usepackage{units}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+% ==============================================================================
+% DOCUMENT METADATA 
+% ==============================================================================
+\title{EE466 \\ Lab 117 \\ Simulering på elektriska kretsar}
+
+\author{\\
+  Jonas Sjöberg\\
+  Högskolan i Gävle,\\
+  Elektronikingenjörsprogrammet,\\
+  \texttt{tel12jsg@student.hig.se}\\
+  \\
+  Oscar Wallberg\\
+  Högskolan i Gävle,\\
+  Dataingenjörsprogrammet,\\
+  \texttt{tco13owg@student.hig.se}\\}
+
+\date{}
+% ==============================================================================
+\begin{document}
+% ==============================================================================
+\maketitle
+
+\begin{center}
+    \begin{tabular}{l r}
+        Labb utförd: & ? Februari 2015 \\
+        Instruktör: & Efrain Zenteno
+    \end{tabular}
+\end{center}
+
+% ==============================================================================
+% ABSTRACT
+% ==============================================================================
+\begin{abstract}
+    Syftet med laborationen är att genom använda ett simuleringsverktyg pröva
+    några av de grundläggande sambanden och satserna i likströmsläran, samt att
+    förstå enkla växelströmskretsar. Dessutom bör studenten efter genomförd
+    laboration få en förståels för hur emklare kretsar kan simuleras.
+\end{abstract}
+
+\newpage
+
+{
+    %\hypersetup{linkcolor=black}
+    \setcounter{tocdepth}{3}
+    \tableofcontents
+}
+
+\newpage
+
+% ==============================================================================
+% SECTION: INTRODUKTION 
+% ==============================================================================
+\section{Introduktion}\label{setup}
+% ==============================================================================
+% TODO: Allmän introduktion.
+
+
+% ==============================================================================
+% SECTION: 1 MÄTNING PÅ SERIESKRETS
+% ==============================================================================
+\section{Mätning på seriekrets}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: + Spänningarna mellan AB, BC och AC.
+
+\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kommentera utgående från Kirchhoffs 2:a lag.
+%       Kommentera utgående från spänningsdelningslagen.
+
+
+% ==============================================================================
+% SECTION: 2 iNVERKAN AV EN PARALLELLGREN PÅ EN KRETS
+% ==============================================================================
+\section{Inverkan av en parallellgren på en krets}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Mät strömmen i punkten B samt strömmen direkt från spänningskällan.
+
+
+% ==============================================================================
+% SECTION: 3 MÄTNING PÅ PARALLELLKRETS
+% ==============================================================================
+\section{Mätning på parallellkrets}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Mät de markerade strömmarna
+
+\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kommentera utgående från Kirchhoffs 1:a lag.
+
+
+% ==============================================================================
+% SECTION: 4 MÄTNING AV RESISTANS
+% ==============================================================================
+\section{Mätning av resistans}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Mät resistansen mellan A och B i nedanstående kretsar.
+
+\subsection{Teoretisk beräkning}\label{}
+% ------------------------------------------------------------------------------
+% TODO: För varje mätning skall du verifiera resultatet med en teoretisk beräkning.
+
+%\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kommentar på skillnader mellan mätresultat och beräkning?
+
+
+% ==============================================================================
+% SECTION: 5 STUDIUM AV FREKVENSGÅNG I EN REAKTIV KRETS
+% ==============================================================================
+\section{Studium av frekvensgång i en reaktiv krets}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: + Gör upp en tabell som för varje frekvens anger
+%         - tongeneratorns signalamplitud,
+%         - amplituden hos spänningen över den studerade kondensatorn
+%         - kvoten mellan den senare amplituden och den tidigare
+%         - samt om fasförskjutning förekommer.
+
+\subsection{Teoretisk beräkning}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kontrollera dina resultat genom att utnyttja följande formel:
+
+\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO:
+
+
+% ==============================================================================
+% SECTION: 6 MÄTNING AV FASFÖRSKJUTNING I EN REAKTIV KRETS
+% ==============================================================================
+\section{Mätning av fasförskjutning i en reaktiv krets}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+%       Samma koppling som förra uppgiften, kanske överflödigt att upprepa?
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO:
+
+\subsection{Teoretisk beräkning}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kontrollera dina resultat genom att utnyttja följande formel:
+
+\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Kommentera resultatet
+
+
+% ==============================================================================
+% SECTION: 7 MÄTNING AV RESONANSFREKVENS
+% ==============================================================================
+\section{Mätning av resonansfrekvens}\label{}
+% ==============================================================================
+% TODO: Kopplingsschema.
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
+% TODO: Notera resonansfrekvensen. 
+
+\subsection{Kommentar}\label{}
+% ------------------------------------------------------------------------------
+% TODO: + Kommentera följande:                                                            
+          - Förekommer fasförskjutning mellan uTG och uR vid denna frekvens?
+          - Ändrar fasen sig om du varierar frekvensen kring den
+            uppmätta resonansfrekvensen?  I så fall hur?
+          - Om laboration 61 har gjorts, jämför resultatet med de uppmätta
+            värderna.  Stämmer de överens om inte, varför?
+
+
+% ==============================================================================
+% SECTION: RESULTAT
+% ==============================================================================
+\section{Resultat}\label{setup}
+% ==============================================================================
+% TODO: Övergripande resultat/sammanfattning/kommentar på HELA labben.
+
+\newpage
+
+% ==============================================================================
+% SECTION: REFERENSER
+% ==============================================================================
+\section{Referenser}\label{refs}
+% ==============================================================================
+%TODO: Referenser.
+
+%\subsection{www}\label{interwebs}
+% ------------------------------------------------------------------------------
+
+%\subsection{Trycksaker}\label{literature} %???
+% ------------------------------------------------------------------------------
+
+%\subsection{Källkod}\label{sourcefiles}
+% ------------------------------------------------------------------------------
+
+% ==============================================================================
+\end{document}
+% ==============================================================================
