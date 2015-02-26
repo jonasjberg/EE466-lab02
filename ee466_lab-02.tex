@@ -95,25 +95,55 @@
 % ==============================================================================
 \section{Mätning på seriekrets}\label{}
 % ==============================================================================
-% TODO: Kopplingsschema.
-
+Seriekretsen enligt figur 1 kopplades upp i Multisim. 10 \si{\volt} valdes för spänningskällan.
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.7]{misc/krets1.png}
+    \caption{Seriekrets}
+    \label{fig:1-mm-schem}
+\end{figure}
 \subsection{Mätresultat}\label{}
-% ------------------------------------------------------------------------------
+%För att mäta spänningarna vid punkt A, B samt C så placerades prober ut. Se figur 2 för resultat.
+%TODO: Lägga in prntscrn/bild av koppling från multisim. ------------------------------------------------------------------------------
 % TODO: Spänningarna mellan AB, BC och AC.
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Kommentera utgående från Kirchhoffs 2:a lag.
 %       Kommentera utgående från spänningsdelningslagen.
-
-
-% ==============================================================================
+Spänningsdelningslagen ger:\\
+\begin{math}
+U_{AB} = U\times\frac{R_{1}}{R_{1}+R_{2}}\\
+U_{AB} = 10\times\frac{100}{100+220}\\
+U_{AB} = 3.125\\
+\\
+U_{BC} = U\times\frac{R_{2}}{R_{1}+R_{2}}\\
+U_{BC} = 10\times\frac{220}{100+220}\\
+U_{BC} = 6.875\\
+\\
+\end{math}
+Kirchhoff's 2:a lag:
+\begin{quote}
+Summan av samtliga emk:s som ingår i en sluten krets är lika med summan av potentialfallen, eller\\
+\begin{math}
+u_{1} + u_{2} + \ldots + u_{n} = 0\\
+\text{där }u_{k} \text{ betecknar en potentialändring.}
+\end{math}
+\end{quote}
+Enligt Kirchhoff's lag:\\
+$U - U_{AB} - U_{BC} = 0$\\
+$10 - 3.125 - 6.875 = 0$, vilket stämmer. %==============================================================================
 % SECTION: 2 iNVERKAN AV EN PARALLELLGREN PÅ EN KRETS
 % ==============================================================================
 \section{Inverkan av en parallellgren på en krets}\label{}
 % ==============================================================================
-% TODO: Kopplingsschema.
-
+Ytterligare en resistor på 330 \si{\ohm} kopplades parallellt till kretsen från figur \ref{fig:1-mm-schem}, se figur \ref{fig:2-mm-schem}.
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=1.0]{misc/krets2.png}
+    \caption{Parallellgren på föregående krets.}
+    \label{fig:2-mm-schem}
+\end{figure}
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Mät strömmen i punkten B samt strömmen direkt från spänningskällan.
@@ -124,7 +154,13 @@
 % ==============================================================================
 \section{Mätning på parallellkrets}\label{}
 % ==============================================================================
-% TODO: Kopplingsschema.
+Två resistorer kopplades enligt figur \ref{fig:3-mm-schem}. Sedan valdes en lämplig spänning för spänningskällan.
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=1.0]{misc/krets3.png}
+    \caption{Parallellgren på föregående krets.}
+    \label{fig:3-mm-schem}
+\end{figure}
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
@@ -140,15 +176,26 @@
 % ==============================================================================
 \section{Mätning av resistans}\label{}
 % ==============================================================================
-% TODO: Kopplingsschema.
-
+Kretsarna funna i figur \ref{fig:4-mm-schem} kopplades.
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.9]{misc/krets4.png}
+    \caption{Resistorkretsar.}
+    \label{fig:4-mm-schem}
+\end{figure}
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Mät resistansen mellan A och B i nedanstående kretsar.
+a)\\
+b)\\
+c)\\
+d)\\
+e)
 
 \subsection{Teoretisk beräkning}\label{}
 % ------------------------------------------------------------------------------
 % TODO: För varje mätning skall du verifiera resultatet med en teoretisk beräkning.
+
 
 %\subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
