@@ -1,4 +1,4 @@
-% ==============================================================================
+ ==============================================================================
 % LAB 117
 % SIMULERING PÅ ELEKTRISKA KRETSAR
 % --------------------------------
@@ -87,7 +87,13 @@
 % ==============================================================================
 \section{Introduktion}\label{setup}
 % ==============================================================================
-% TODO: Allmän introduktion.
+En uppsättning vanligt förekommande kopplingar och kretsar ska simuleras i
+programmet Multisim av National Instruments. Multisim utgör en del av en uppsättning program
+för allehanda EDA, t.ex. CAD, PCB-design och simulering, under proprietär och
+komersiell licens. Multisim är en variant av simuleringsprogrammet spice som
+utvecklades vid "Electronics Research Laboratory of the University of
+California, Berkeley". Spice har kommit att bli de facto standard inom
+industrin och många verktyg är baserade på någon version av spice.
 
 
 % ==============================================================================
@@ -96,21 +102,26 @@
 \section{Mätning på seriekrets}\label{}
 % ==============================================================================
 Seriekretsen enligt figur 1 kopplades upp i Multisim. 10 \si{\volt} valdes för spänningskällan.
+
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.7]{misc/krets1.png}
     \caption{Seriekrets}
     \label{fig:1-mm-schem}
 \end{figure}
+
 \subsection{Mätresultat}\label{}
-%För att mäta spänningarna vid punkt A, B samt C så placerades prober ut. Se figur 2 för resultat.
-%TODO: Lägga in prntscrn/bild av koppling från multisim. ------------------------------------------------------------------------------
-% TODO: Spänningarna mellan AB, BC och AC.
+% ------------------------------------------------------------------------------
+% För att mäta spänningarna vid punkt A, B samt C så placerades prober ut. Se
+% figur 2 för resultat.
+% TODO: * Lägga in prntscrn/bild av koppling från multisim. 
+%       * Spänningarna mellan AB, BC och AC.
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO: Kommentera utgående från Kirchhoffs 2:a lag.
-%       Kommentera utgående från spänningsdelningslagen.
+% TODO: * Kommentera utgående från Kirchhoffs 2:a lag.
+%       * Kommentera utgående från spänningsdelningslagen.
+
 Spänningsdelningslagen ger:\\
 \begin{math}
 U_{AB} = U\times\frac{R_{1}}{R_{1}+R_{2}}\\
@@ -122,28 +133,40 @@ U_{BC} = 10\times\frac{220}{100+220}\\
 U_{BC} = 6.875\\
 \\
 \end{math}
+
 Kirchhoff's 2:a lag:
+
 \begin{quote}
 Summan av samtliga emk:s som ingår i en sluten krets är lika med summan av potentialfallen, eller\\
+
 \begin{math}
 u_{1} + u_{2} + \ldots + u_{n} = 0\\
 \text{där }u_{k} \text{ betecknar en potentialändring.}
 \end{math}
+
 \end{quote}
+
 Enligt Kirchhoff's lag:\\
+
 $U - U_{AB} - U_{BC} = 0$\\
-$10 - 3.125 - 6.875 = 0$, vilket stämmer. %==============================================================================
+$10 - 3.125 - 6.875 = 0$, vilket stämmer. 
+
+
+% ==============================================================================
 % SECTION: 2 iNVERKAN AV EN PARALLELLGREN PÅ EN KRETS
 % ==============================================================================
 \section{Inverkan av en parallellgren på en krets}\label{}
 % ==============================================================================
-Ytterligare en resistor på 330 \si{\ohm} kopplades parallellt till kretsen från figur \ref{fig:1-mm-schem}, se figur \ref{fig:2-mm-schem}.
+Ytterligare en resistor på 330 \si{\ohm} kopplades parallellt till kretsen från
+figur \ref{fig:1-mm-schem}, se figur \ref{fig:2-mm-schem}.
+
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=1.0]{misc/krets2.png}
     \caption{Parallellgren på föregående krets.}
     \label{fig:2-mm-schem}
 \end{figure}
+
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Mät strömmen i punkten B samt strömmen direkt från spänningskällan.
@@ -154,7 +177,9 @@ Ytterligare en resistor på 330 \si{\ohm} kopplades parallellt till kretsen frå
 % ==============================================================================
 \section{Mätning på parallellkrets}\label{}
 % ==============================================================================
-Två resistorer kopplades enligt figur \ref{fig:3-mm-schem}. Sedan valdes en lämplig spänning för spänningskällan.
+Två resistorer kopplades enligt figur \ref{fig:3-mm-schem}.
+Sedan valdes en lämplig spänning för spänningskällan.
+
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=1.0]{misc/krets3.png}
@@ -177,12 +202,14 @@ Två resistorer kopplades enligt figur \ref{fig:3-mm-schem}. Sedan valdes en lä
 \section{Mätning av resistans}\label{}
 % ==============================================================================
 Kretsarna funna i figur \ref{fig:4-mm-schem} kopplades.
+
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.9]{misc/krets4.png}
     \caption{Resistorkretsar.}
     \label{fig:4-mm-schem}
 \end{figure}
+
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Mät resistansen mellan A och B i nedanstående kretsar.
