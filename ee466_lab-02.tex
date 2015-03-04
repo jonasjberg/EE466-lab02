@@ -62,7 +62,7 @@
 
 \begin{center}
     \begin{tabular}{l r}
-        Lab utförd: & ? Februari 2015 \\
+        Lab utförd: & 26 Februari 2015 \\
         Instruktör: & Efrain Zenteno
     \end{tabular}
 \end{center}
@@ -93,16 +93,21 @@
 \section{Introduktion}\label{setup}
 % ==============================================================================
 En uppsättning vanligt förekommande kopplingar och kretsar ska simuleras i
-programmet Multisim av National Instruments. Multisim utgör en del av en uppsättning program
-för allehanda EDA, t.ex. CAD, PCB-design och simulering, under proprietär och
-komersiell licens. Multisim är en variant av simuleringsprogrammet spice som
-utvecklades vid "Electronics Research Laboratory of the University of
-California, Berkeley". Spice har kommit att bli de facto standard inom
-industrin och många verktyg är baserade på någon version av spice.
+programmet Multisim av National Instruments. Multisim utgör en del av en
+uppsättning program för allehanda EDA, t.ex. CAD, PCB-design och simulering,
+under proprietär och kommersiell licens. Multisim är en variant av
+simuleringsprogrammet spice som utvecklades vid "Electronics Research
+Laboratory of the University of California, Berkeley". Spice har kommit att bli
+de facto standard inom industrin och många verktyg är baserade på någon version
+av spice.
 
-All uppkoppling görs i ett grafiskt användarinterface, delvis med hjälp av
+\par All uppkoppling görs i ett grafiskt användarinterface, delvis med hjälp av
 virtuella mätinstrument men framförallt med den grundläggande funktionaliteten
-som återfinns i enklare spice-liknande program.
+som återfinns i mindre användarvänliga men mer kraftfulla spice-liknande
+program, som ngspice, LTSpice, Qucs, PSpice, etc.
+\par Alla komponenter och signalkällor är ideala och saknar helt simulering av
+parasitiska egenskaper som för t.ex. en resistor kan beskrivas som en oönskad
+seriell induktans och parallell kapacitans.
 
 
 % ==============================================================================
@@ -112,16 +117,20 @@ som återfinns i enklare spice-liknande program.
 % ==============================================================================
 Seriekretsen enligt figur 1 kopplades upp i Multisim. \unit[10]{\si{\volt}}
 valdes för spänningskällan.
-Motstånden och spänningskällan är ideala och saknar helt simulering av parasitiska
-egenskaper som kan beskrivas som t.ex. en seriell induktans och parallell kapacitans.
-\cite{ednarticle}
 
 \par I en seriekrets flyter samma ström genom alla punkter. Vi ser att samtliga probar
-mäter att strömmen \textbf{I} = \unit[31,3]{\si{\mA}} vilket stämmer.
+mäter att strömmen \textbf{I} = \unit[31,3]{\si{\mA}} vilket stämmer överens med
+det ideala fallet;
+
+\begin{equation*}
+I = \frac{V}{R}\\
+  = \frac{\unit[10]{\si{\volt}}}{\unit[100]{\si{\ohm}} + \unit[220]{\si{\ohm}}}\\
+  = \unit[31,3]{\si{\mA}}
+\end{equation*}
 
 \begin{figure}[htbp]
     \centering
-%        \includegraphics[scale=0.7]{multi/krets1.png}
+        \includegraphics[scale=0.7]{misc/krets1.png}
     \caption{Seriekrets}
     \label{fig:1-mm-schem}
 \end{figure}
@@ -156,9 +165,6 @@ beskrivs som skillnaden mellan proberna \textbf{Probe\_A}, \textbf{Probe\_B} och
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO: * Kommentera utgående från Kirchhoffs 2:a lag.
-%       * Kommentera utgående från spänningsdelningslagen.
-
 Spänningsdelningslagen ger:\\[+2mm]
 \begin{math}
 U_{AB} = U\times\frac{R_{1}}{R_{1}+R_{2}}\\[+2mm]
@@ -246,7 +252,6 @@ Mätresultat utläses direkt ur Figur \ref{fig:sim3}.
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO: Kommentera utgående från Kirchhoffs 1:a lag.
 Kirchhoff's 1:a lag:
 \begin{quote}
 Summan av alla elektriska strömmar som flyter till en nod är lika med summan av alla strömmar som flyter från noden, eller\\
@@ -510,7 +515,11 @@ kopplingen utgör ett lågpassfilter.
 % ------------------------------------------------------------------------------
 \begin{equation}
 \frac{u_{c}}{u_{TG}} = \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
+<<<<<<< HEAD
 = \frac{1}{\sqrt{1+(2\pi\times \unit[100]{\si{\Hz}}\times \unit[1]{\si{\kohm}}\times \unit[100]{\si{\nano\farad}})^{2}}}\\
+=======
+%= \frac{1}{\sqrt{1+(2\pi\times \unit[100]{\si{\Hz}}\times \unit[1]{\si{\kohm}}\times \unit[100]{\si{\nanofarad}})^{2}}}\\
+>>>>>>> master
 %&= \frac{1}{\sqrt{1 + (2 \pi \times \unit[100]{\Hz} \times 1)}}
 %                     &= \frac{1}{\sqrt{1+(2 \pi \times \unit[100]{\Hz} \times \unit[1]{\kohm} \times \unit[100]{\nanofarad}})^2}}\\
 %                     &= \frac{1}{\sqrt{1+(2 \pi \times 100 \times \num{1e3} \times \num{100e-9})^2}}
@@ -597,17 +606,24 @@ Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig
 Simulering av kretsar är ett mycket användbart verktyg vid kretsdesign och
 produktutveckling. Multisim är ett nybörjarvänligt program som gör processen
 väldigt enkel med bl.a. virtuella mätinstrument och möjlighet till att
-manipulera resistanser och andra virtuella komponenter i realtid.  \par
-Kretssimulering kan vara lämpligt för att testa en grundidé eller topologi, men
-resultaten kan många gånger vara felvisande då verkliga komponenter och kretsar
-påverkas av saker som parasitiska effekter, kapacitiv koppling mellan
+manipulera resistanser och andra virtuella komponenter i realtid.
+\par Kretssimulering kan vara lämpligt för att testa en grundidé eller topologi,
+men resultaten kan många gånger vara felvisande då verkliga komponenter och
+kretsar påverkas av saker som parasitiska effekter, kapacitiv koppling mellan
 parallella ledare, begränsad bandbredd hos förstärkare, etc.  Därför är det
 ofta nödvändigt att konstruera en riktig prototyp med just de komponenter man
 tänkt använda för att få en bild av hur en kretsdesign faktiskt kommer att bete
 sig.  Andra aspekter som vi totalt bortsett från är t.ex. hur
 experimentplattornas kapacitans kombinerat oscilloskop-probens höga impedans i
 sig formar ett ovälkommet lågpassfilter.
-
+\par Vi känner att vi fått ett bra grepp om hur programvaran fungerar och hur
+simuleringen med visualiseringen av simuleringsdata hänger ihop med faktiska
+mätningar på verkliga kopplingar. Skillnaderna mellan idealfallet och det reella
+fallet har tillkännagivits.
+\par Huruvida vi kommer att ha tillgång till Multisim i framtiden är omöjligt
+att veta. Säkert är dock att spice-simulering är en standard som ligger till
+grund för majoriteten av kretssimuleringsmjukvara och kunskap om denna är högst
+användbart.
 
 \newpage
 
