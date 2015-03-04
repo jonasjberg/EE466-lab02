@@ -174,7 +174,6 @@ Kirchhoff's 2:a lag:
 
 \begin{quote}
 Summan av samtliga emk:s som ingår i en sluten krets är lika med summan av potentialfallen, eller\\
-
 \begin{math}
 u_{1} + u_{2} + \ldots + u_{n} = 0\\
 \text{där }u_{k} \text{ betecknar en potentialändring.}
@@ -247,7 +246,16 @@ Mätresultat utläses direkt ur Figur \ref{fig:sim3}.
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
 % TODO: Kommentera utgående från Kirchhoffs 1:a lag.
-
+Kirchhoff's 1:a lag:
+\begin{quote}
+Summan av alla elektriska strömmar som flyter till en nod är lika med summan av alla strömmar som flyter från noden, eller\\
+$i_1 + i_2 \ldots + i_n = 0$\\
+där $i_k$ betecknar en nodström.
+\end{quote}
+Detta ger att \\
+$I = I_1 + I_2 =
+= 0.1 + 0.0455 = 0.1455 \si{\ampere}$\\
+Det är möjligt att Probe\_A inte angett fullständig noggrannhet och därav missat en sista decimal. Detta kan förklara varför $I$ inte är detsamma i figur \ref{fig:sim3}.
 \clearpage
 
 % ==============================================================================
