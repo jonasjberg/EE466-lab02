@@ -501,7 +501,14 @@ kopplingen utgör ett lågpassfilter.
 
 \subsection{Teoretisk beräkning}\label{}
 % ------------------------------------------------------------------------------
-% TODO: Kontrollera dina resultat genom att utnyttja följande formel:
+\begin{align*}
+%\frac{u_{c}}{u_{TG}} &= \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
+$A_{v}$ &= \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
+&= \frac{1}{\sqrt{1 + (2 \pi \times \unit[100]{\Hz} \times 1)}}
+%                     &= \frac{1}{\sqrt{1+(2 \pi \times \unit[100]{\Hz} \times \unit[1]{\kohm} \times \unit[100]{\nanofarad}})^2}}\\
+%                     &= \frac{1}{\sqrt{1+(2 \pi \times 100 \times \num{1e3} \times \num{100e-9})^2}}
+\end{align*}
+
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
@@ -583,6 +590,9 @@ Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig
 \section{Referenser}\label{refs}
 % ==============================================================================
 % TODO: Referenser.
+
+\textbf{Resistors aren't resistors} Wyatt, Kenneth. \textit{EDN Magazine 2013-10-29}
+\texttt{www.edn.com/design/components-and-packaging/4423492/Resistors-aren-t-resistors}
 
 
 
