@@ -102,7 +102,13 @@ industrin och många verktyg är baserade på någon version av spice.
 % ==============================================================================
 \section{Mätning på seriekrets}\label{}
 % ==============================================================================
-Seriekretsen enligt figur 1 kopplades upp i Multisim. 10 \si{\volt} valdes för spänningskällan.
+Seriekretsen enligt figur 1 kopplades upp i Multisim. \unit[10]{\si{\volt}}
+valdes för spänningskällan.
+Motstånden och spänningskällan är ideala och saknar helt simulering av parasitiska
+egenskaper som kan beskrivas som t.ex. en seriell induktans och parallell kapacitans.
+
+\par I en seriekrets flyter samma ström genom alla punkter. Vi ser att samtliga probar
+mäter att strömmen \textbf{I} = \unit[31,3]{\si{\mA}} vilket stämmer.
 
 \begin{figure}[htbp]
     \centering
@@ -114,7 +120,9 @@ Seriekretsen enligt figur 1 kopplades upp i Multisim. 10 \si{\volt} valdes för 
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
-För att mäta spänningarna vid punkt A, B samt C så placerades prober ut. 
+För att mäta spänningarna vid punkt A, B samt C så placerades prober ut på de
+nät som sökts. Proben justeras till att visa relevanta storheter, spänning och
+ström.
 Spänningarna vid och strömmarna genom alla prober visas i realtid enligt 
 Figur \ref{fig:sim2}.
 
@@ -135,7 +143,6 @@ beskrivs som skillnaden mellan proberna \textbf{Probe\_A}, \textbf{Probe\_B} och
     \caption{Simuleringsresultat för seriekrets}
     \label{fig:sim2op}
 \end{figure}
-
 
 
 \subsection{Kommentar}\label{}
