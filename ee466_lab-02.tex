@@ -511,7 +511,7 @@ kopplingen utgör ett lågpassfilter.
 % ------------------------------------------------------------------------------
 \begin{equation}
 \frac{u_{c}}{u_{TG}} = \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
-= \frac{1}{\sqrt{1+(2\pi\times \unit[100]{\si{\Hz}}\times \unit[1]{\si{\kohm}}\times \unit[100]{\si{\nanofarad}})^{2}}}\\
+%= \frac{1}{\sqrt{1+(2\pi\times \unit[100]{\si{\Hz}}\times \unit[1]{\si{\kohm}}\times \unit[100]{\si{\nanofarad}})^{2}}}\\
 %&= \frac{1}{\sqrt{1 + (2 \pi \times \unit[100]{\Hz} \times 1)}}
 %                     &= \frac{1}{\sqrt{1+(2 \pi \times \unit[100]{\Hz} \times \unit[1]{\kohm} \times \unit[100]{\nanofarad}})^2}}\\
 %                     &= \frac{1}{\sqrt{1+(2 \pi \times 100 \times \num{1e3} \times \num{100e-9})^2}}
@@ -598,17 +598,24 @@ Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig
 Simulering av kretsar är ett mycket användbart verktyg vid kretsdesign och
 produktutveckling. Multisim är ett nybörjarvänligt program som gör processen
 väldigt enkel med bl.a. virtuella mätinstrument och möjlighet till att
-manipulera resistanser och andra virtuella komponenter i realtid.  \par
-Kretssimulering kan vara lämpligt för att testa en grundidé eller topologi, men
-resultaten kan många gånger vara felvisande då verkliga komponenter och kretsar
-påverkas av saker som parasitiska effekter, kapacitiv koppling mellan
+manipulera resistanser och andra virtuella komponenter i realtid.
+\par Kretssimulering kan vara lämpligt för att testa en grundidé eller topologi,
+men resultaten kan många gånger vara felvisande då verkliga komponenter och
+kretsar påverkas av saker som parasitiska effekter, kapacitiv koppling mellan
 parallella ledare, begränsad bandbredd hos förstärkare, etc.  Därför är det
 ofta nödvändigt att konstruera en riktig prototyp med just de komponenter man
 tänkt använda för att få en bild av hur en kretsdesign faktiskt kommer att bete
 sig.  Andra aspekter som vi totalt bortsett från är t.ex. hur
 experimentplattornas kapacitans kombinerat oscilloskop-probens höga impedans i
 sig formar ett ovälkommet lågpassfilter.
-
+\par Vi känner att vi fått ett bra grepp om hur programvaran fungerar och hur
+simuleringen med visualiseringen av simuleringsdata hänger ihop med faktiska
+mätningar på verkliga kopplingar. Skillnaderna mellan idealfallet och det reella
+fallet har tillkännagivits.
+\par Huruvida vi kommer att ha tillgång till Multisim i framtiden är omöjligt
+att veta. Säkert är dock att spice-simulering är en standard som ligger till
+grund för majoriteten av kretssimuleringsmjukvara och kunskap om denna är högst
+användbart.
 
 \newpage
 
