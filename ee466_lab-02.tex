@@ -100,7 +100,7 @@ utvecklades vid "Electronics Research Laboratory of the University of
 California, Berkeley". Spice har kommit att bli de facto standard inom
 industrin och många verktyg är baserade på någon version av spice.
 
-All uppkoppling görs i ett grafiskt användarinterface, delvis med hjälp av 
+All uppkoppling görs i ett grafiskt användarinterface, delvis med hjälp av
 virtuella mätinstrument men framförallt med den grundläggande funktionaliteten
 som återfinns i enklare spice-liknande program.
 
@@ -132,7 +132,7 @@ mäter att strömmen \textbf{I} = \unit[31,3]{\si{\mA}} vilket stämmer.
 För att mäta spänningarna vid punkt A, B samt C så placerades prober ut på de
 nät som sökts. Proben justeras till att visa relevanta storheter, spänning och
 ström.
-Spänningarna vid och strömmarna genom alla prober visas i realtid enligt 
+Spänningarna vid och strömmarna genom alla prober visas i realtid enligt
 Figur \ref{fig:sim2}.
 
 \begin{figure}[htbp]
@@ -143,7 +143,7 @@ Figur \ref{fig:sim2}.
 \end{figure}
 
 För en relativ mätning används \emph{DC operating point}. De sökta spänningarna
-beskrivs som skillnaden mellan proberna \textbf{Probe\_A}, \textbf{Probe\_B} och 
+beskrivs som skillnaden mellan proberna \textbf{Probe\_A}, \textbf{Probe\_B} och
 \textbf{Probe\_C}. Se figur \ref{fig:sim2op} för resultat.
 
 \begin{figure}[htbp]
@@ -185,7 +185,7 @@ u_{1} + u_{2} + \ldots + u_{n} = 0\\
 Enligt Kirchhoff's lag:\\
 
 $U - U_{AB} - U_{BC} = 0$\\
-$10 - 3.125 - 6.875 = 0$, vilket stämmer. 
+$10 - 3.125 - 6.875 = 0$, vilket stämmer.
 
 \clearpage
 
@@ -326,7 +326,7 @@ direkt till $R_{A} = R_{1} = $\unit[150]{\ohm}
 \subsubsection{B}
 Resistansen $R_{B}$ i Figur \ref{fig:sim-4b} är teoretiskt;
 % 180+150 = 330
-\begin{align*}                                            
+\begin{align*}
 R_{B}    &= R_{1} + R_{2}                        \\
          &= \unit[150]{\ohm} + \unit[180]{\ohm}  \\
          &= \unit[330]{\ohm}                     \\
@@ -335,7 +335,7 @@ R_{B}    &= R_{1} + R_{2}                        \\
 \subsubsection{C}
 Resistansen $R_{C}$ i Figur \ref{fig:sim-4c} är teoretiskt;
 % 1/((1/330)+(1/(180+150))) = 165
-\begin{align*}                                            
+\begin{align*}
 R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} \\
         &= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} \\
         &= \unit[165]{\ohm}
@@ -344,7 +344,7 @@ R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} \\
 \subsubsection{D}
 Resistansen $R_{D}$ i Figur \ref{fig:sim-4d} är teoretiskt;
 % 1/((1/330)+(1/(180+150)))+120 = 285
-\begin{align*}                                            
+\begin{align*}
 R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} + R_{4} \\
 &= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} + \unit[120]{\ohm} \\
 &= \unit[285]{\ohm}
@@ -353,7 +353,7 @@ R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} + R_{4} \\
 \subsubsection{E}
 Resistansen $R_{E}$ i Figur \ref{fig:sim-4e} är teoretiskt;
 % 1/((1/330)+(1/(180+150)))+120+100 = 385
-\begin{align*}                                            
+\begin{align*}
 R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} + R_{4} + R_{5} \\
 &= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} + \unit[120]{\ohm} + \unit[100]{\ohm}\\
 &= \unit[385]{\ohm}
@@ -371,7 +371,11 @@ De teoretiska beräkningarna överensstämmer med simuleringen.
 % ==============================================================================
 \section{Studium av frekvensgång i en reaktiv krets}\label{}
 % ==============================================================================
-% TODO: Kopplingsschema.
+Vid mätning av frekvensgången i en reaktiv krets används kopplingen i Figur
+\ref{fig:sim-5-ACanalysis-setup}. Signalgeneratorn kopplas över både resistorn
+$R_{1}$ och kondensatorn $C_{1}$ och kan ses som en insignal. Den påverkade
+signalen ligger över $C_{1}$, högre frekvenser dämpas mer än lägre frekvenser,
+kopplingen utgör ett lågpassfilter.
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
@@ -380,6 +384,40 @@ De teoretiska beräkningarna överensstämmer med simuleringen.
 %         - amplituden hos spänningen över den studerade kondensatorn
 %         - kvoten mellan den senare amplituden och den tidigare
 %         - samt om fasförskjutning förekommer.
+% \begin{longtable}[c]{@{}ccc@{}}
+%     \toprule\addlinespace
+%     \begin{tabular}{ll}Frekvens
+%     \end{tabular} & \begin{tabular}{ll}$V_{in}$
+% \end{tabular} & \begin{tabular}{ll}$V_{ut}$
+% \end{tabular}
+% \\\addlinespace
+% \midrule\endhead
+% 100\si{\Hz} & 1 \si{\volt} & 1,01 \si{\kilo\hertz}
+% \\\addlinespace
+% 300\si{\Hz} & 1 \si{\volt} & 1,01 \si{\kilo\hertz}
+% \\\addlinespace
+% 500\si{\Hz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 700\si{\Hz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 900\si{\Hz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 1,10\si{\kHz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 1,30\si{\kHz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 1,50\si{\kHz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 1,70\si{\kHz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% 1,90\si{\kHz} & 1 \si{\volt} & 1,009 \si{\kilo\hertz}
+% \\\addlinespace
+% \bottomrule
+% \addlinespace
+% \caption{Jämförelse av olika kurvformer.}
+% \label{vdivtable2}
+% \end{longtable}
+
 
 \subsubsection{Oscilloskopsvy}
 \begin{figure}[H]
@@ -471,7 +509,14 @@ De teoretiska beräkningarna överensstämmer med simuleringen.
 
 \subsection{Teoretisk beräkning}\label{}
 % ------------------------------------------------------------------------------
-% TODO: Kontrollera dina resultat genom att utnyttja följande formel:
+\begin{align*}
+%\frac{u_{c}}{u_{TG}} &= \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
+$A_{v}$ &= \frac{1}{\sqrt{1+(2 \pi \times f \times R \times C)^2}}\\
+&= \frac{1}{\sqrt{1 + (2 \pi \times \unit[100]{\Hz} \times 1)}}
+%                     &= \frac{1}{\sqrt{1+(2 \pi \times \unit[100]{\Hz} \times \unit[1]{\kohm} \times \unit[100]{\nanofarad}})^2}}\\
+%                     &= \frac{1}{\sqrt{1+(2 \pi \times 100 \times \num{1e3} \times \num{100e-9})^2}}
+\end{align*}
+
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
@@ -512,8 +557,9 @@ Signalens fas utläses ur den nedre grafen i Figur \ref{fig:sim-5-ACanalysis-res
 % ------------------------------------------------------------------------------
 Simuleringsresultatet för AC-analysen visas i Figur \ref{fig:7-ACanalysis}.
 Signalkällans frekvens sveps mellan \unit[100]{\si{\Hz}}-\unit[100]{\si{\kHz}}.
-Amplituden utläses vertikalt och har enheten \si{\dB}.
-\par I den övre grafen är den gula markören positionerad vid resonansfrekvensen 
+Amplituden utläses vertikalt och har enheten \si{\dB}, vilket är lämpligt för
+att visa små förändringar över ett stort intervall.
+\par I den övre grafen är den gula markören positionerad vid resonansfrekvensen
 som utläses under \textbf{Probe2}, $F_{resonans} = $\unit[15,8489]{\si{\kHz}}.
 Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig noll.
 
@@ -553,9 +599,12 @@ Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig
 % ==============================================================================
 % TODO: Referenser.
 
+\textbf{Resistors aren't resistors} Wyatt, Kenneth. \textit{EDN Magazine 2013-10-29}
+\texttt{www.edn.com/design/components-and-packaging/4423492/Resistors-aren-t-resistors}
 
 
-%\printbibliography 
+
+%\printbibliography
 
 
 %\subsection{Källkod}\label{sourcefiles}
