@@ -255,7 +255,7 @@ Mätresultat utläses direkt ur Figur \ref{fig:sim3}.
 % ==============================================================================
 \section{Mätning av resistans}\label{}
 % ==============================================================================
-Kretsarna funna i figur \ref{fig:4-mm-schem} kopplades.
+Kretsarna funna i figur \ref{fig:4-mm-schem} kopplades upp.
 
 \begin{figure}[htbp]
     \centering
@@ -310,7 +310,41 @@ Kretsarna funna i figur \ref{fig:4-mm-schem} kopplades.
 
 \subsection{Teoretisk beräkning}\label{}
 % ------------------------------------------------------------------------------
-% TODO: För varje mätning skall du verifiera resultatet med en teoretisk beräkning.
+\subsubsection{A}
+Resistansen $R_A$ i Figur \ref{fig:sim-4a} utgörs av ett enda motstånd och kan utläsas
+direkt till $R_{A} = R_{1} = $\unit[150]{\ohm}
+
+\subsubsection{B}
+Resistansen $R_{B}$ i Figur \ref{fig:sim-4b} är teoretiskt;
+\begin{align*}                                            
+R_{B}    &= R_{1} + R_{2}                        \\
+         &= \unit[150]{\ohm} + \unit[180]{\ohm}  \\
+         &= \unit[330]{\ohm}                     \\
+\end{align*}
+
+\subsubsection{C}
+Resistansen $R_{C}$ i Figur \ref{fig:sim-4c} är teoretiskt;
+\begin{align*}                                            
+R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} \\
+        &= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} \\
+        &= \unit[283,125]{\ohm}
+\end{align*}
+
+\subsubsection{D}
+Resistansen $R_{D}$ i Figur \ref{fig:sim-4d} är teoretiskt;
+\begin{align*}                                            
+R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} + R_{4} \\
+&= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} + \unit[120]{\ohm} \\
+&= \unit[403,125]{\ohm}
+\end{align*}
+
+\subsubsection{E}
+Resistansen $R_{E}$ i Figur \ref{fig:sim-4e} är teoretiskt;
+\begin{align*}                                            
+R_{C}   &= \frac{1}{\frac{1}{R_{3}} + \frac{1}{R_{1} + R_{2}}} + R_{4} + R_{5} \\
+&= \frac{1}{\frac{1}{330\unit{\ohm}} + \frac{1}{\unit[150]{\ohm} + \unit[180]{\ohm}}} + \unit[120]{\ohm} + \unit[100]{\ohm}\\
+&= \unit[503,125]{\ohm}
+\end{align*}
 
 
 %\subsection{Kommentar}\label{}
