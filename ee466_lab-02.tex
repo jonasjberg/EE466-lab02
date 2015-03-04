@@ -30,6 +30,10 @@
 \usepackage{gensymb}
 %\usepackage{tabto}
 \usepackage{units}
+%\usepackage[]{biblatex}
+%\addbibresource{bibliografi.bib}
+%\bibliography{bibliografi.bib}
+%\bibliographystyle{ieeetr}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -95,6 +99,9 @@ utvecklades vid "Electronics Research Laboratory of the University of
 California, Berkeley". Spice har kommit att bli de facto standard inom
 industrin och många verktyg är baserade på någon version av spice.
 
+All uppkoppling görs i ett grafiskt användarinterface, delvis med hjälp av 
+virtuella mätinstrument men framförallt med den grundläggande funktionaliteten
+som återfinns i enklare spice-liknande program.
 
 
 % ==============================================================================
@@ -106,6 +113,7 @@ Seriekretsen enligt figur 1 kopplades upp i Multisim. \unit[10]{\si{\volt}}
 valdes för spänningskällan.
 Motstånden och spänningskällan är ideala och saknar helt simulering av parasitiska
 egenskaper som kan beskrivas som t.ex. en seriell induktans och parallell kapacitans.
+\cite{ednarticle}
 
 \par I en seriekrets flyter samma ström genom alla punkter. Vi ser att samtliga probar
 mäter att strömmen \textbf{I} = \unit[31,3]{\si{\mA}} vilket stämmer.
@@ -455,7 +463,12 @@ Se den nedre grafen i Figur \ref{fig:sim-5-ACanalysis-results}.
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
-Se Figur \ref{fig:sim-7-ACanalysis} för resultatet av AC analysen.
+Simuleringsresultatet för AC-analysen visas i Figur \ref{fig:7-ACanalysis}.
+Signalkällans frekvens sveps mellan \unit[100]{\si{\Hz}}-\unit[100]{\si{\kHz}}.
+Amplituden utläses vertikalt och har enheten \si{\dB}.
+\par I den övre grafen är den gula markören positionerad vid resonansfrekvensen 
+som utläses under \textbf{Probe2}, $F_{resonans} = $\unit[15,8489]{\si{\kHz}}.
+Den nedre grafen visar fasförskjutningen som vid resonansfrekvensen närmar sig noll.
 
 
 \begin{figure}
@@ -493,11 +506,10 @@ Se Figur \ref{fig:sim-7-ACanalysis} för resultatet av AC analysen.
 % ==============================================================================
 % TODO: Referenser.
 
-%\subsection{www}\label{interwebs}
-% ------------------------------------------------------------------------------
 
-%\subsection{Trycksaker}\label{literature} %???
-% ------------------------------------------------------------------------------
+
+%\printbibliography 
+
 
 %\subsection{Källkod}\label{sourcefiles}
 % ------------------------------------------------------------------------------
