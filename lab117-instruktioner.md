@@ -101,6 +101,7 @@ om 200 Hz.
 
 Kontrollera dina resultat genom att utnyttja följande formel:
 
+
 6 Mätning av fasförskjutning i en reaktiv krets
 -----------------------------------------------
 Utnyttja uppkopplingen i föregående uppgift. Du skall nu mäta fasen
